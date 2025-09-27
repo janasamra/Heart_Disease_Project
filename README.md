@@ -1,7 +1,7 @@
 # Heart_Disease_Project
 
 ## 📊 Dataset
-- **Source:** [UCI Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/heart+disease) (or specify if different)  
+- **Source:** [UCI Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/heart+disease)  
 - **Rows:** ~300  
 - **Columns:** age, sex, cholesterol, blood pressure, max heart rate, etc.  
 - **Target variable:** Presence of heart disease (`1`) or No heart disease (`0`).  
