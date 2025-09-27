@@ -1,1 +1,61 @@
+Heart Disease Prediction Project - Evaluation Metrics
+====================================================
 
+This file summarizes the performance metrics from the supervised learning models (Logistic Regression, Decision Tree, Random Forest, SVM) and unsupervised clustering analysis. Metrics are based on the binary target (0: no disease, 1: disease).
+
+### Supervised Learning Models (Test Set Performance)
+These models were trained on the preprocessed features and evaluated using accuracy, precision, recall, F1-score, and AUC-ROC.
+
+- **Logistic Regression**
+  - Accuracy: 0.902
+  - Precision: 0.906
+  - Recall: 0.906
+  - F1-Score: 0.906
+  - AUC-ROC: 0.953
+
+- **Decision Tree**
+  - Accuracy: 0.754
+  - Precision: 0.774
+  - Recall: 0.750
+  - F1-Score: 0.762
+  - AUC-ROC: 0.754
+
+- **Random Forest**
+  - Accuracy: 0.836
+  - Precision: 0.893
+  - Recall: 0.781
+  - F1-Score: 0.833
+  - AUC-ROC: 0.933
+
+- **SVM (Support Vector Machine)**
+  - Accuracy: 0.918
+  - Precision: 0.966
+  - Recall: 0.875
+  - F1-Score: 0.918
+  - AUC-ROC: 0.964
+
+### Unsupervised Learning (Clustering)
+Clustering was performed on the preprocessed features to identify patterns without labels. Metrics are evaluated against the binary target for comparison.
+
+- **K-Means Clustering**
+  - Silhouette Score: 0.189
+  - Adjusted Rand Index (ARI) vs. Binary Target: 0.280
+
+- **Hierarchical Clustering**
+  - Silhouette Score: 0.167
+  - Adjusted Rand Index (ARI) vs. Binary Target: 0.173
+
+### Hyperparameter Tuning (SVM)
+GridSearchCV was used to tune the SVM model (5-fold cross-validation).
+
+- **Best Parameters**: {'C': 0.1, 'gamma': 'scale', 'kernel': 'rbf'}
+- **Cross-Validation AUC**: nan (Note: This may indicate an issue in computation; verify in notebook 06_hyperparameter_tuning.ipynb)
+- **Test AUC**: 0.958
+
+### Notes
+- All metrics are computed on the test set after train-test split.
+- The SVM model shows the highest performance (Accuracy: 0.918, AUC: 0.964).
+- For detailed plots, confusion matrices, and code, refer to notebooks/04_supervised_learning.ipynb and notebooks/06_hyperparameter_tuning.ipynb.
+- Final Model: Tuned SVM (saved as models/final_model_tuned.pkl) with Test AUC: 0.958.
+
+Generated on 25/9/2025. See notebooks for full analysis.
